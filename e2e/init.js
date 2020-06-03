@@ -1,7 +1,7 @@
 const detox = require('detox');
 const adapter = require('detox/runners/mocha/adapter');
 
-before(async () => {
+before(async function() {
   await detox.init(undefined, {launchApp: false});
 });
 
@@ -13,6 +13,6 @@ afterEach(async function() {
   await adapter.afterEach(this);
 });
 
-after(async () => {
+after(async function() {
   await detox.cleanup();
 });

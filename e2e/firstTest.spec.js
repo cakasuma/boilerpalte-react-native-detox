@@ -1,6 +1,5 @@
-describe('Example', () => {
-  before(async () => {
-    console.log('hi3');
+describe('Example', function() {
+  before(async function() {
     await device.launchApp({
       newInstance: true,
       launchArgs: {detoxPrintBusyIdleResources: 'YES'},
@@ -11,12 +10,15 @@ describe('Example', () => {
     });
     console.log('hi4');
   });
-  beforeEach(async () => {
+
+  beforeEach(async function() {
     await device.reloadReactNative();
   });
 
-  it('should have welcome screen', async () => {
-    console.log('does it come here?');
+  it('step 1 exists', async function() {
     expect(element(by.id('step_1'))).toBeVisible();
+  });
+  it('debug exists', async function() {
+    expect(element(by.id('debug'))).toBeVisible();
   });
 });

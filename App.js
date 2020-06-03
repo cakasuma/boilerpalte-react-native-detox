@@ -24,7 +24,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const App: () => React$Node = () => {
+const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -40,7 +40,9 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle} testID='step_1'>Step One</Text>
+              <Text style={styles.sectionTitle} testID="step_1">
+                Step One
+              </Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
                 screen and then come back to see your edits.
@@ -53,7 +55,9 @@ const App: () => React$Node = () => {
               </Text>
             </View>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionTitle} testID="debug">
+                Debug
+              </Text>
               <Text style={styles.sectionDescription}>
                 <DebugInstructions />
               </Text>
