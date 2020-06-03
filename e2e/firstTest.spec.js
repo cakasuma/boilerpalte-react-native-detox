@@ -8,7 +8,6 @@ describe('Example', function() {
         location: 'always',
       },
     });
-    console.log('hi4');
   });
 
   beforeEach(async function() {
@@ -16,9 +15,9 @@ describe('Example', function() {
   });
 
   it('step 1 exists', async function() {
-    expect(element(by.id('step_1'))).toBeVisible();
+    await expect(element(by.id('step_1'))).toBeVisible();
   });
   it('debug exists', async function() {
-    expect(element(by.id('debug'))).toBeVisible();
+    await expect(element(by.id('debug'))).toBeVisible();
   });
 });

@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "detox:ios": "detox build --configuration ios",
+    "test:ios": "detox test --configuration ios",
+    "detox:android": "detox build --configuration android",
+    "test:android": "detox test --configuration android"
   },
   "dependencies": {
     "react": "16.11.0",
